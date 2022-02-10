@@ -1,16 +1,16 @@
 
 FROM techblog/fastapi:latest
 
-LABEL maintainer="tomer.klein@gmail.com"
-ENV DEEPSTACK_HOST_ADDRESS=""
-ENV DEEPSTACK_API_KEY=""
+LABEL maintainer="baileycw15@gmail.com"
+ENV DEEPSTACK_HOST_ADDRESS="http://192.168.50.37:5255"
+ENV DEEPSTACK_API_KEY="s4SXKDbL28zBjsyfC52W"
 ENV MIN_CONFIDANCE=0.70
 ENV PYTHONIOENCODING=utf-8
 ENV LANG=C.UTF-8
 
 RUN apt update -yqq
 
-RUN apt -yqq install python3-pip
+RUN apt -y install python3-pip
     
 RUN  pip3 install --upgrade pip --no-cache-dir && \
      pip3 install --upgrade setuptools --no-cache-dir
